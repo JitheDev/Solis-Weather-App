@@ -112,6 +112,14 @@ gap: 12px;
     .container {
       padding: 5px; 
     }
+
+    .top-bar {
+        padding-top: 10px;
+      }     
+    .search-icon {
+        width: 36px; 
+        height: 36px;
+      }
     .weather-temp {
       font-size: 36px; 
     }
