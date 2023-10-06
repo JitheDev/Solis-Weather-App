@@ -13,32 +13,45 @@ import humidity_icon from '../Assets/humidity.png';
 export const WeatherApp = () => {
 
     let api_key= "9d298d0b309a18cb36c7b3a607985819";
+    const search = async () => {
+        const element = document.getElementsByClassName("cityInput");
+        if (element[0].value === "") {
+            return 0;
+        }
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${element[0].value}&units=imperial&appid=${api_key}`;
+        let response = await fetch(url);
+        let data = await response.json();
+        const humidity = document.getElementsByClassName("humidity-percentage");
+        const wind = document.getElementsByClassName("wind-rate")
+        const temperature = document.getElementsByClassName("weather-temp");
+        const location = document.getElementsByClassName("weather-location");
+    }
 
   return (
     <div className='container'>
         <div className="top-bar">
             <input type="text" className="cityInput" placeholder='Search' />
-            <div className="search-icon">
+            <div className="search-icon" onClick={() => {search()}}>
                 <img src={search_icon} alt="search icon" />
             </div>
         </div>
         <div className="weather-image">
             <img src={cloud_icon} alt="cloud covering the sun" />
         </div>
-        <div className="weather-temp">87°f</div>
-        <div className="weather-location">Ocala</div>
+        <div className="weather-temp">24°c</div>
+        <div className="weather-location">London</div>
         <div className="data-container">
             <div className="element">
                 <img src={humidity_icon} alt="moisture in the air" />
                 <div className="data">
-                    <div className="humidity-percentage">54%</div>
+                    <div className="humidity-percentage">20%</div>
                     <div className="text">Humidity</div>
                 </div>
             </div>
             <div className="element">
                 <img src={wind_icon} alt="windy" />
                 <div className="data">
-                    <div className="humidity-percentage">4 mph</div>
+                    <div className="wind-rate">20 mph</div>
                     <div className="text">Wind Speed</div>
                 </div>
             </div>
