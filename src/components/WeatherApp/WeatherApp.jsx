@@ -9,7 +9,7 @@ import snow_icon from '../Assets/snow.png';
 import wind_icon from '../Assets/wind.png';
 import humidity_icon from '../Assets/humidity.png';
 
-const api_key = "9d298d0b309a18cb36c7b3a607985819";
+const api_key = "Insert Your Key Here";
 
 export const WeatherApp = () => {
   const [wicon, setWicon] = useState(clear_icon);
@@ -146,7 +146,7 @@ export const WeatherApp = () => {
   };
 
   return (
-    <div className='container' id='weather'>
+    <div className='container'>
       <div className="top-bar">
         <input type="text" className="cityInput" placeholder='Search' />
         <div className="search-icon" onClick={search}>
@@ -156,7 +156,7 @@ export const WeatherApp = () => {
       <div className="weather-image">
         <img src={wicon} alt="cloud covering the sun" />
       </div>
-      <div className="weather-temp">{temperature}&#176;c</div>
+      <div className="weather-temp">{temperature}&#176;f</div>
       <div className="weather-location">{location}</div>
       <div className="data-container">
         <div className="element">
