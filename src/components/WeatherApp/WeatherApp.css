@@ -1,11 +1,12 @@
 .container {
-    width: 607px;
+    width: 100%;
+    max-width: 607px;
     height: 829px; 
     margin: 0 auto;
     margin-top:75px;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 12px;
-    background-image: linear-gradient(180deg, rgba(17, 92, 197, 0.7), rgba(10, 139, 179, 0.7) 100%);;
+    background-image: linear-gradient(180deg, rgba(17, 92, 197, 0.7), rgba(10, 139, 179, 0.7) 100%);
     background-clip: content-box; 
 }
 
@@ -91,3 +92,41 @@ gap: 12px;
 .icon {
   margin-top: 10px;  
 }
+
+/* Media Query for Tablets (e.g., iPad) */
+@media (max-width: 768px) {
+    .container {
+      padding: 10px; 
+    }
+    .weather-temp {
+      font-size: 48px; 
+    }
+    .weather-location {
+      font-size: 24px; 
+    }
+    
+  }
+  
+  /* Media Query for Smartphones */
+  @media (max-width: 480px) {
+    .container {
+      padding: 5px; 
+    }
+    .weather-temp {
+      font-size: 36px; 
+    }
+    .weather-location {
+      font-size: 18px; 
+    }
+    .element {
+        margin: 10px 0; 
+        padding: 5px; 
+    }
+    .data {
+      font-size: 16px; 
+    }
+    .text {
+      font-size: 12px; 
+    }
+
+  }
