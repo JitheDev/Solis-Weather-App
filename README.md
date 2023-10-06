@@ -2,7 +2,7 @@
 
 This is a simple **Weather App** built using React that allows users to check the current weather conditions for their location or any other location they search for. It fetches weather data from the OpenWeatherMap API.
 
-![Solis App Screenshot](solis.png)
+![Solis App Screenshot](Solis.png)
 
 ## Features
 
