@@ -146,7 +146,7 @@ export const WeatherApp = () => {
   };
 
   return (
-    <div className='container'>
+    <div className='container' id='weather'>
       <div className="top-bar">
         <input type="text" className="cityInput" placeholder='Search' />
         <div className="search-icon" onClick={search}>

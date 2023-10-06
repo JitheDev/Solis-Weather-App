@@ -1,11 +1,14 @@
 .container {
-   width: 607px;
-   height: 829px; 
-   margin: auto;
-   margin-top: 75px;
-   border-radius: 12px;
-   background-image: linear-gradient(180deg, #130754, #3b2f80 100%);
+    width: 607px;
+    height: 829px; 
+    margin: 0 auto;
+    margin-top:75px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 12px;
+    background-image: linear-gradient(180deg, rgba(17, 92, 197, 0.7), rgba(10, 139, 179, 0.7) 100%);;
+    background-clip: content-box; 
 }
+
 
 .top-bar {
     display: flex;
